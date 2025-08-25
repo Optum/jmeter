@@ -1,7 +1,7 @@
-29901,accessors-smart-2.5.0.jar
+30358,accessors-smart-2.5.2.jar
 30570,annotations-24.1.0.jar
 6806,apiguardian-api-1.1.2.jar
-123598,asm-9.6.jar
+126093,asm-9.7.1.jar
 485898,batik-anim-1.16.jar
 424607,batik-awt-util-1.16.jar
 704905,batik-bridge-1.16.jar
@@ -71,8 +71,8 @@
 911620,httpclient5-5.4.4.jar
 327891,httpcore-4.4.16.jar
 368896,httpcore-nio-4.4.16.jar
-855013,httpcore5-5.2.4.jar
-237145,httpcore5-h2-5.2.4.jar
+908601,httpcore5-5.3.4.jar
+241692,httpcore5-h2-5.3.4.jar
 41727,httpmime-4.5.14.jar
 78480,jackson-annotations-2.16.1.jar
 578125,jackson-core-2.16.1.jar
