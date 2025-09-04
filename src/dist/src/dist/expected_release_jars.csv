@@ -1,7 +1,7 @@
-29901,accessors-smart-2.5.0.jar
+30358,accessors-smart-2.5.2.jar
 30570,annotations-24.1.0.jar
 6806,apiguardian-api-1.1.2.jar
-123598,asm-9.6.jar
+126093,asm-9.7.1.jar
 485898,batik-anim-1.16.jar
 424607,batik-awt-util-1.16.jar
 704905,batik-bridge-1.16.jar
@@ -50,7 +50,7 @@
 353322,datamodel-jvm-4.1.0.jar
 98115,dec-0.1.2.jar
 95287,deprecated-in-v4-jvm-4.1.0.jar
-320748,dnsjava-2.1.9.jar
+583996,dnsjava-3.6.1.jar
 16829,error_prone_annotations-2.24.0.jar
 1736381,freemarker-2.3.32.jar
 32359,geronimo-jms_1.1_spec-1.1.1.jar
@@ -68,11 +68,11 @@
 109741,hamcrest-date-2.0.8.jar
 181512,httpasyncclient-4.1.5.jar
 785639,httpclient-4.5.14.jar
-861640,httpclient5-5.3.jar
+911620,httpclient5-5.4.4.jar
 327891,httpcore-4.4.16.jar
 368896,httpcore-nio-4.4.16.jar
-855013,httpcore5-5.2.4.jar
-237145,httpcore5-h2-5.2.4.jar
+908601,httpcore5-5.3.4.jar
+241692,httpcore5-h2-5.3.4.jar
 41727,httpmime-4.5.14.jar
 78480,jackson-annotations-2.16.1.jar
 578125,jackson-core-2.16.1.jar
@@ -87,7 +87,7 @@
 19858,jodd-log-5.0.13.jar
 26047,jodd-props-5.0.13.jar
 277582,json-path-2.8.0.jar
-120233,json-smart-2.5.0.jar
+122358,json-smart-2.5.2.jar
 473788,jsoup-1.17.1.jar
 249924,jtidy-r938.jar
 384581,junit-4.13.2.jar
@@ -108,7 +108,7 @@
 22576,miglayout-swing-5.3.jar
 613352,mongo-java-driver-2.14.3.jar
 29680,mxparser-1.2.2.jar
-5223562,neo4j-java-driver-4.4.13.jar
+5380615,neo4j-java-driver-4.4.20.jar
 65261,oro-2.0.8.jar
 1314621,ph-commons-10.2.5.jar
 530791,ph-css-6.5.0.jar
@@ -137,4 +137,4 @@
 7188,xmlpull-1.1.3.1.jar
 1027769,xmlresolver-5.2.1-data.jar
 165689,xmlresolver-5.2.1.jar
-644649,xstream-1.4.20.jar
+646504,xstream-1.4.21.jar
