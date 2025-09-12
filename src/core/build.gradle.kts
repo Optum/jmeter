@@ -106,7 +106,7 @@ dependencies {
     implementation("org.apache.tika:tika-core") {
         isTransitive = false
     }
-    runtimeOnly("org.apache.tika:tika-parsers") {
+    runtimeOnly("org.apache.tika:tika-parsers-standard-package") {
         isTransitive = false
     }
     implementation("org.apache.xmlgraphics:xmlgraphics-commons")

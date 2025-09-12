@@ -27,6 +27,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.RegExUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.apache.http.entity.ContentType;
 import org.apache.jmeter.config.Argument;
 import org.apache.jmeter.config.Arguments;
@@ -114,7 +115,7 @@ public final class GraphQLRequestParamUtils {
      * @return an HTTP GET request parameter value converted from the GraphQL Query input string
      */
     public static String queryToGetParamValue(final String query) {
-        return RegExUtils.replaceAll(StringUtils.trim(query), WHITESPACES_PATTERN, " ");
+        return RegExUtils.replaceAll(StringUtils.trim(query), "\\p{Space}+", " ");
     }
 
     /**
@@ -163,7 +164,7 @@ public final class GraphQLRequestParamUtils {
         final JsonNode queryNode = data.get(QUERY_FIELD);
         query = getJsonNodeTextContent(queryNode, false);
         final String trimmedQuery = StringUtils.trim(query);
-        if (!StringUtils.startsWith(trimmedQuery, QUERY_FIELD) && !StringUtils.startsWith(trimmedQuery, "mutation")) {
+        if (!Strings.CS.startsWith(trimmedQuery, QUERY_FIELD) && !Strings.CS.startsWith(trimmedQuery, "mutation")) {
             throw new IllegalArgumentException("Not a valid GraphQL query.");
         }
 
@@ -242,12 +243,12 @@ public final class GraphQLRequestParamUtils {
 
     private static boolean isNoJsonObject(String variables) {
         return StringUtils.isNotEmpty(variables)
-                && (!StringUtils.startsWith(variables, "{") || !StringUtils.endsWith(variables, "}"));
+                && (!Strings.CS.startsWith(variables, "{") || !Strings.CS.endsWith(variables, "}"));
     }
 
     private static boolean isNoQueryOrMutation(String query) {
         return StringUtils.isEmpty(query)
-                || (!StringUtils.startsWith(query, QUERY_FIELD) && !StringUtils.startsWith(query, "mutation"));
+                || (!Strings.CS.startsWith(query, QUERY_FIELD) && !Strings.CS.startsWith(query, "mutation"));
     }
 
     private static String getJsonNodeTextContent(final JsonNode jsonNode, final boolean nullable) {

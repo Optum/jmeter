@@ -67,7 +67,7 @@ commons-lang-2.6
 http://commons.apache.org/downloads/download_lang.cgi
 - velocity (Anakia)
 
-commons-lang3-3.9
+commons-lang3-3.18
 ----------------
 http://commons.apache.org/downloads/download_lang.cgi
 - URLCollection (unescapeXml)
@@ -162,7 +162,7 @@ jodd-props-5.0.6
 http://www.jodd.org/
 - used by Report/Dashboard feature properties management
 
-json-path-2.4.0
+json-path-2.9.0
 --------
 https://github.com/jayway/JsonPath
 - JSON Path Extractor

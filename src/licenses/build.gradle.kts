@@ -69,7 +69,7 @@ val gatherSourceLicenses by tasks.registering(GatherLicenseTask::class) {
     val wrapperProps = "$rootDir/gradle/wrapper/gradle-wrapper.properties"
     inputs.file(wrapperProps).withPathSensitivity(PathSensitivity.RELATIVE).withPropertyName("wrapper.props")
     addDependency("org.gradle:gradle-wrapper:${gradleWrapperVersion(wrapperProps)}", SpdxLicense.Apache_2_0)
-    addDependency(":bootstrap:3.3.4", SpdxLicense.MIT)
+    addDependency(":bootstrap:4.3.1", SpdxLicense.MIT)
     addDependency(":bootstrap-social:4.8.0", SpdxLicense.MIT)
     addDependency(":datatables:1.10.9", SpdxLicense.MIT)
     addDependency(":datatables-plugins:1.0.1", SpdxLicense.MIT)
