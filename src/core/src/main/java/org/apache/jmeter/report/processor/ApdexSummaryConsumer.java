@@ -57,7 +57,7 @@ public class ApdexSummaryConsumer extends
         ApdexThresholdsInfo thresholdsInfo = data.getApdexThresholdInfo();
         Long satisfiedThreshold = thresholdsInfo.getSatisfiedThreshold();
         Long toleratedThreshold = thresholdsInfo.getToleratedThreshold();
-        String keyOrDefault = ObjectUtils.defaultIfNull(
+        String keyOrDefault = ObjectUtils.getIfNull(
                 key, JMeterUtils.getResString("reportgenerator_summary_total"));
 
         ListResultData result = new ListResultData();

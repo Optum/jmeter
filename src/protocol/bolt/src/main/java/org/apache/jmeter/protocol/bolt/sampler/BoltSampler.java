@@ -132,7 +132,7 @@ public class BoltSampler extends AbstractBoltTestElement implements Sampler, Tes
             res.setResponseCode("500");
         }
         res.setResponseData(
-                ObjectUtils.defaultIfNull(ex.getMessage(), "NO MESSAGE"),
+                ObjectUtils.getIfNull(ex.getMessage(), "NO MESSAGE"),
                 res.getDataEncodingNoDefault());
         res.setSuccessful(false);
         return res;

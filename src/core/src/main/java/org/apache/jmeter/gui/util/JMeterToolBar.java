@@ -32,7 +32,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.apache.jmeter.gui.UndoHistory;
 import org.apache.jmeter.gui.action.ActionNames;
 import org.apache.jmeter.gui.action.ActionRouter;
@@ -159,7 +159,7 @@ public class JMeterToolBar extends JToolBar implements LocaleChangeListener {
         if (imageURL == null) {
             throw new IllegalArgumentException("No icon for: " + iconBean.getActionName());
         }
-        if (StringUtils.endsWithIgnoreCase(iconBean.getIconPath(), ".svg")) {
+        if (Strings.CS.endsWith(iconBean.getIconPath(), ".svg")) {
             return new ThemedSVGIcon(imageURL.toURI(), iconBean.getWidth(), iconBean.getHeight());
         }
         return new ImageIcon(imageURL);

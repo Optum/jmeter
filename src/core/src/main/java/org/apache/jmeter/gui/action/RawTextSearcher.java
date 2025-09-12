@@ -20,6 +20,7 @@ package org.apache.jmeter.gui.action;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 
 /**
  * Searcher implementation that searches text as is
@@ -45,7 +46,7 @@ public class RawTextSearcher implements Searcher {
     public boolean search(List<String> textTokens) {
         return textTokens.stream()
                 .filter(StringUtils::isNotEmpty)
-                .anyMatch(token -> caseSensitive ? token.contains(textToSearch) : StringUtils.containsAnyIgnoreCase(token, textToSearch));
+                .anyMatch(token -> caseSensitive ? token.contains(textToSearch) : Strings.CS.containsAny(token, textToSearch));
     }
 
     @Override

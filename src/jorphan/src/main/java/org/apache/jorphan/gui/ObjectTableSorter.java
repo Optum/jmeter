@@ -148,7 +148,7 @@ public class ObjectTableSorter extends RowSorter<ObjectTableModel> {
      */
     public ObjectTableSorter setValueComparator(int column, Comparator<?> comparator) {
         invalidate();
-        valueComparators[column] = ObjectUtils.defaultIfNull(comparator, getDefaultComparator(column));
+        valueComparators[column] = ObjectUtils.getIfNull(comparator, getDefaultComparator(column));
         return this;
     }
 
@@ -185,7 +185,7 @@ public class ObjectTableSorter extends RowSorter<ObjectTableModel> {
      */
     public ObjectTableSorter setFallbackComparator(Comparator<Row> comparator) {
         invalidate();
-        fallbackComparator = ObjectUtils.defaultIfNull(comparator, Comparator.comparingInt(Row::getIndex));
+        fallbackComparator = ObjectUtils.getIfNull(comparator, Comparator.comparingInt(Row::getIndex));
         return this;
     }
 
