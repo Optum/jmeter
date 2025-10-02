@@ -24,9 +24,11 @@ plugins {
     id("com.github.vlsi.stage-vote-release")
 }
 
-configurations.all {
-    resolutionStrategy {
-        force("org.slf4j:slf4j-api:1.7.36")
+allprojects {
+    configurations.all {
+        resolutionStrategy {
+            force("org.slf4j:slf4j-api:1.7.36")
+        }
     }
 }
 
