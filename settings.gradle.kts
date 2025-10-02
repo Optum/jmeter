@@ -19,23 +19,15 @@ import com.gradle.enterprise.gradleplugin.internal.extension.BuildScanExtensionW
 import java.util.*
 
 pluginManagement {
-    repositories {
-        gradlePluginPortal() // This is essential for resolving community plugins like com.gradle.develocity
-        mavenCentral()
-    }
-
     plugins {
-        id("com.gradle.develocity") version "4.2"
-        id("com.gradle.common-custom-user-data-gradle-plugin") version "1.12.1"
-        id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
         id("com.github.vlsi.stage-vote-release") version "1.90"
     }
 }
 
 plugins {
-    id("com.gradle.develocity")
-    id("com.gradle.common-custom-user-data-gradle-plugin")
-    id("org.gradle.toolchains.foojay-resolver-convention")
+    id("com.gradle.enterprise") version "3.15.1"
+    id("com.gradle.common-custom-user-data-gradle-plugin") version "1.12.1"
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
 }
 
 dependencyResolutionManagement {
