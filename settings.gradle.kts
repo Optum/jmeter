@@ -19,13 +19,17 @@ import com.gradle.enterprise.gradleplugin.internal.extension.BuildScanExtensionW
 import java.util.*
 
 pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
     plugins {
         id("com.github.vlsi.stage-vote-release") version "1.90"
     }
 }
 
 plugins {
-    id("com.gradle.develocity") version "3.18.2"
+    id("com.gradle.enterprise") version "3.15.1"
     id("com.gradle.common-custom-user-data-gradle-plugin") version "1.12.1"
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
 }
