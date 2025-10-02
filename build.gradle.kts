@@ -24,6 +24,14 @@ plugins {
     id("com.github.vlsi.stage-vote-release")
 }
 
+allprojects {
+    configurations.all {
+        resolutionStrategy {
+            force("org.slf4j:slf4j-api:1.7.36")
+        }
+    }
+}
+
 fun Project.boolProp(name: String) =
     findProperty(name)
         // Project properties include tasks, extensions, etc, and we want only String properties

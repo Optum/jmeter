@@ -21,8 +21,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.RandomStringGenerator;
 import org.apache.jmeter.engine.util.CompoundVariable;
 import org.apache.jmeter.samplers.SampleResult;
 import org.apache.jmeter.samplers.Sampler;
@@ -90,11 +90,17 @@ public class RandomString extends AbstractFunction {
         }
 
         String myValue = null;
-        if(StringUtils.isEmpty(charsToUse)) {
-            myValue = RandomStringUtils.random(length, 0, Character.MAX_CODE_POINT, false, false, null, null);
+        RandomStringGenerator generator;
+        if (StringUtils.isEmpty(charsToUse)) {
+            generator = new RandomStringGenerator.Builder()
+                    .withinRange(Character.MIN_CODE_POINT, Character.MAX_CODE_POINT)
+                    .build();
         } else {
-            myValue = RandomStringUtils.random(length, 0, charsToUse.length(), false, false, charsToUse.toCharArray(), null);
+            generator = new RandomStringGenerator.Builder()
+                    .selectFrom(charsToUse.toCharArray())
+                    .build();
         }
+        myValue = generator.generate(length);
 
         if (myName.length() > 0) {
             JMeterVariables vars = getVariables();
